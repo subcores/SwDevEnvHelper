@@ -21,7 +21,7 @@
         }
     },
     "extra": {
-        "shopware-plugin-class": "SubcoreSwDevEnvHelper",
+        "shopware-plugin-class": "Subcore\\SwDevEnvHelper\\SubcoreSwDevEnvHelper",
         "label": {
             "de-DE": "Änderung von Entwicklungsbezogene Einstellungen",
             "en-GB": "Change of development-related settings"
