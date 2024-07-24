@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/trunk/src/Core/System/SystemConfig/Schema/config.xsd">
+
+    <card>
+        <title>Local Development Configuration</title>
+        <title lang="de-DE">Lokale Entwicklungseinstellungen</title>
+
+        <input-field type="text">
+            <name>imageDomainSearch</name>
+            <label>Development Address</label>
+            <label lang="de-DE">Entwicklungsadresse</label>
+            <helpText>Local FQDN or IP address</helpText>
+            <helpText lang="de-DE">Lokale Domain oder IP Adressse </helpText>
+            <defaultValue>YourSite.wip</defaultValue>
+        </input-field>
+        <input-field type="text">
+            <name>imageDomainReplace</name>
+            <label>Real live address</label>
+            <label lang="de-DE">Reale Live Adresse</label>
+            <defaultValue>example.com</defaultValue>
+        </input-field>
+    </card>
+
+</config>
