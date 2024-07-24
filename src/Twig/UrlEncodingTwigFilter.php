@@ -10,7 +10,6 @@ use Shopware\Storefront\Framework\Twig\Extension\UrlEncodingTwigFilter as BaseUr
 use Shopware\Core\System\SystemConfig\SystemConfigService;
 use Twig\TwigFilter;
 
-
 class UrlEncodingTwigFilter extends BaseUrlEncodingTwigFilter
 {
     public function __construct(
