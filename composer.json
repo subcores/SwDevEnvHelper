@@ -1,5 +1,5 @@
 {
-    "name": "subcores/shopware-dev-env-helper",
+    "name": "subcore/shopware-dev-env-helper",
     "description": "Shopware 6 Development Helper",
     "version": "1.0.0",
     "type": "shopware-platform-plugin",
