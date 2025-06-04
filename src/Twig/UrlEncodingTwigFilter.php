@@ -6,14 +6,18 @@ namespace Subcore\SwDevEnvHelper\Twig;
 
 use Shopware\Core\Checkout\Order\OrderEntity;
 use Shopware\Core\Content\Media\MediaEntity;
+use Shopware\Core\System\SalesChannel\Context\SalesChannelContext;
+use Shopware\Core\System\SalesChannel\Context\SalesChannelContextService;
 use Shopware\Storefront\Framework\Twig\Extension\UrlEncodingTwigFilter as BaseUrlEncodingTwigFilter;
 use Shopware\Core\System\SystemConfig\SystemConfigService;
+use Symfony\Component\HttpFoundation\RequestStack;
 use Twig\TwigFilter;
 
 class UrlEncodingTwigFilter extends BaseUrlEncodingTwigFilter
 {
     public function __construct(
         private readonly SystemConfigService $systemConfigService,
+        private readonly RequestStack $requestStack,
     ) {
     }
 
@@ -32,9 +36,11 @@ class UrlEncodingTwigFilter extends BaseUrlEncodingTwigFilter
             return '';
         }
 
+        $salesChannelId = $this->requestStack->getCurrentRequest()?->get('sw-sales-channel-context')?->getSalesChannelId();
+
         return str_replace(
-            $this->systemConfigService->get('SubcoreSwDevEnvHelper.config.imageDomainSearch'),
-            $this->systemConfigService->get('SubcoreSwDevEnvHelper.config.imageDomainReplace'),
+            $this->systemConfigService->get('SubcoreSwDevEnvHelper.config.imageDomainSearch', $salesChannelId),
+            $this->systemConfigService->get('SubcoreSwDevEnvHelper.config.imageDomainReplace', $salesChannelId),
             $encodedPath
         );
     }

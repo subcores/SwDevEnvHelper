@@ -1,7 +1,7 @@
 {
     "name": "subcore/shopware-dev-env-helper",
     "description": "Shopware 6 Development Helper",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "type": "shopware-platform-plugin",
     "license": "MIT",
     "minimum-stability": "dev",
@@ -12,8 +12,8 @@
     ],
     "require": {
         "php": "~8.2.0 || ~8.3.0",
-        "shopware/core": "^6.6.0",
-        "shopware/storefront": "^6.6.0"
+        "shopware/core": "^6.6",
+        "shopware/storefront": "^6.6"
     },
     "autoload": {
         "psr-4": {
@@ -28,7 +28,7 @@
         },
         "manufacturerLink": {
             "de-DE": "https://subcore.dev/",
-            "en-GB": "https://dubcore.dev/"
+            "en-GB": "https://subcore.dev/"
         }
     }
 }
